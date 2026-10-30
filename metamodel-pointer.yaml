@@ -1,25 +1,32 @@
 # Metamodel Pointer — Journey Touchpoint
-# Auto-generated from OpenDEAM v0.2.1 (dea-architecture-framework, ADR-0002).
-# Do not edit manually — allocation changes go through the root model
-# (structural: ADR + minor bump; additive: PR + patch bump).
-metamodel:
-  version: v0.2.1
-  entity_id: dea:entity-journey-touchpoint
-  class_alias: JT
-  layer: L1
-  building_block: L1-experience-points
-  viewer_url: "https://technehub-labs.github.io/metamodel/?entity=JT"
-
-catalog:
-  name: Journey Touchpoint
-  repo: technehub-labs/dea-catalog-journey-touchpoints
-  status: planned
-
+#
+# Two consumers, two blocks (see FOUNDATIONS §5):
+#   - the top-level identity keys are consumed by the vendored
+#     regenerate_catalog.py to build CATALOG.yaml's catalog block;
+#   - the `metamodel:` allocation block is validated by
+#     dea-architecture-framework validate-against-model.yml
+#     against the pinned root-model ref (v0.8.0), and asserted
+#     locally by scripts/check_pointer.py.
+#
+# Allocation changes go through the root model, not this file.
+id: dea:catalog-journey-touchpoints
+name: Journey Touchpoint
+abbreviation: JT
+version: 0.1.0
+status: active
+metamodel_version: 1.0.0
+owner: TechNeHub Labs
 description: |
   A point of interaction on a customer or user journey, across a specific channel.
-
+metamodel:
+  building_block: L1-experience-points
+  class_alias: JT
+  entity_id: dea:entity-journey-touchpoint
+  layer: L1
+  version: v0.8.0
+  viewer_url: https://technehub-labs.github.io/metamodel/?entity=JT
 links:
   metamodel_repo: https://github.com/technehub-labs/dea-metamodel
   root_model: https://github.com/technehub-labs/dea-architecture-framework
-  viewer: "https://technehub-labs.github.io/metamodel/?entity=JT"
+  viewer: https://technehub-labs.github.io/metamodel/?entity=JT
   github: https://github.com/technehub-labs/dea-catalog-journey-touchpoints

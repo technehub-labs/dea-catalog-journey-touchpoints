@@ -1,0 +1,27 @@
+catalog:
+  abbreviation: JT
+  counts:
+    candidates: 0
+    canonical: 0
+    entities: 0
+    open_change_requests: 0
+    research_files: 0
+    retired: 0
+  cross_cutting:
+    change_requests: change-requests/
+    classifications: classifications/
+    contributions_queue: contributions/
+    schemas: schemas/
+    validators: scripts/
+  description: 'A point of interaction on a customer or user journey, across a specific channel.
+
+    '
+  entities: []
+  id: dea:catalog-journey-touchpoints
+  metamodel_version: 1.0.0
+  name: Journey Touchpoint
+  owner: TechNeHub Labs
+  repository: https://github.com/technehub-labs/dea-catalog-journey-touchpoints.git
+  research_registers: []
+  status: active
+  version: 0.1.0
